@@ -1,0 +1,1054 @@
+#include<graphics.h>
+#include<conio.h>
+
+#include<iostream>
+#include<stdlib.h>
+//#include<winbgin.h>
+using namespace std;
+
+class Ecuaciones{
+	private:
+int a,b,c,m1,m2,y1,x1,a1,b1,c1,a2,b2,c2;
+string tb;
+/*int a1,b1,c1;*/
+		public:
+			Ecuaciones(int,int,int,int,int,int,int,int,int,int,int,int,int,string);
+				
+			void calcular();
+			void calcular1();
+			void calcular2();
+			void calcular3();
+};
+
+Ecuaciones::Ecuaciones (int z01,int b02,int c03,int _m1 ,int _m2,int _y1  ,int _x1,int _a1,int _b1,int _c1,int _a2,int _b2,int _c2, string st){
+a=z01;
+b=b02;
+c=c03;
+m1=_m1;
+m2=_m2;
+y1=_y1;
+x1=_x1;	
+a1=_a1;
+b1=_b1;
+c1=_c1;
+a2=_a2;
+b2=_b2;
+c2=_c2;
+tb=st;
+	
+}
+
+void Ecuaciones:: calcular(){
+	
+	int p,tu,td,t2,t1,e,sg,x,y;
+	
+		cout<<"\n";
+			cout<<"     \n";
+            cout<<"        < ------- PRODUCTO 1 ------> \n";
+            cout<<"               ...............  \n";
+	     	cout<<" \n";
+	     	cout<<" \n";
+cout<<"     +-------------------+ \n";
+cout<<"     |    Forma General  | \n";
+cout<<"     +-------------------+ \n";
+cout<<"\n";
+cout<<"\n";
+cout<<"    -25x-5y+75=0\n";
+cout<<" \n";
+	p=-1*c;
+	cout<<"\n";
+		t1=a/p;
+			t2=p/a;
+			e=t2;
+			t2=p/b;
+			
+			
+	     	cout<<" \n";
+		cout<<"     +-------------------+ \n";
+        cout<<"     |   Forma Simetrica | \n";
+        cout<<"     +-------------------+ \n";
+        cout<<" \n";
+			cout<<"     x"<<"      "<<"y"<<"\n";
+			cout<<"   -----"<<"+"<< "------ =   1\n ";
+			cout<<"    "<<e<<"      "<<t2<<"\n";	
+			cout<<"\n";
+			cout<<"      a ="<<e<<"\n";
+			cout<<"      b ="<<t2<<"\n";
+			cout<<"\n";
+			cout<<"     +-------------------+ \n";
+            cout<<"     |   Coordenadas     | \n";
+            cout<<"     +-------------------+ \n";
+	     	cout<<" \n";
+		
+			cout<<"      P1(0,"<<e<<")"<<"\n";
+			cout<<"      P2(0,"<<t2<<")"<<"\n";
+				cout<<"\n";
+				cout<<"\n";
+				//plano cartesiano
+		moveto(0,300);
+		lineto(600,300);
+	
+		moveto(300,0);
+		lineto(300,600);
+	
+		for(x=0;x<=600;x=x+20)
+		{
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+			setcolor(BLUE);
+		
+		}
+			
+	setcolor(WHITE);
+//     X
+	outtextxy(0,305," -14");
+    outtextxy(40,305,"-12");
+	outtextxy(80,305,"-10");
+	outtextxy(120,305,"-8");
+	outtextxy(160,305,"-6");
+    outtextxy(200,305,"-4");
+	outtextxy(240,305,"-2");
+												
+													//outtextxy(0,305,"-15");
+	outtextxy(580,305,"14");
+	outtextxy(540,305,"12");
+	outtextxy(500,305,"10");
+	outtextxy(460,305,"8");
+	outtextxy(420,305,"6");
+	outtextxy(380,305,"4");
+	outtextxy(340,305,"2");
+		//Y			
+	outtextxy(270,580,"-14");
+    outtextxy(270,540,"-12");
+	outtextxy(270,500,"-10");
+	outtextxy(280,460,"-8");
+	outtextxy(280,420,"-6");
+    outtextxy(280,380,"-4");
+	outtextxy(280,340,"-2");
+												
+													//outtextxy(0,305,"-15");
+	outtextxy(270,20," 14");
+	outtextxy(270,60," 12");
+	outtextxy(270,100,"10");
+	outtextxy(280,140,"8");
+	outtextxy(280,180,"6");
+	outtextxy(280,220,"4");
+	outtextxy(280,260,"2");		
+		
+		
+	setcolor(14);
+		outtextxy(360,80,"Forma General");
+     	outtextxy(360,90,"-25x-5y+75=0");
+     	outtextxy(360,120,"Forma ordinaria");
+		outtextxy(360,130,"y=-5x+15");
+		outtextxy(360,150,"Forma simetrica");
+		outtextxy(360,160,"  x        y  ");
+		outtextxy(360,170,"-----  + -----");
+		outtextxy(360,180,"  3        15 ");	
+		outtextxy(305,0,"P2(0,15)");
+		outtextxy(360,280,"P1(3,0)");
+	
+	
+		for(y=0;y<=600;y=y+20)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+		
+			setcolor(GREEN);
+		moveto(300,0);
+		lineto(360,300);
+		setcolor(BLUE);
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(280,2,"Y");
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(610,300,"X");
+
+		
+}
+
+
+void Ecuaciones:: calcular1(){
+	int t1,t2,f1,f2,t3,x,y;
+	t1=m2*y1;
+	t2=m1*x1;
+	t3=t1-t2;
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),YELLOW);
+		f1=-1*(-12/1);
+	f2=-1*(-12/-2);
+	cout<<"\n";
+	
+        cout<<"     +-------------------+ \n";
+        cout<<"     |   Forma Simetrica | \n";
+        cout<<"     +-------------------+ \n";
+        cout<<" \n";
+    cout<<"\n";
+   	cout<<"     x"<<"      "<<"y"<<"\n";
+    cout<<"   -----"<<"+"<< "------ =   1\n ";
+	cout<<"    "<<f1<<"      "<<f2<<"\n";	
+	cout<<"\n";
+    cout<<"     +-------------------+ \n";
+    cout<<"     |    Forma General  | \n";
+    cout<<"     +-------------------+ \n";
+cout<<"\n";
+	cout<<"     x"<<"-2y"<<t3<<"=0"<<"\n";
+	cout<<"\n";
+		    cout<<"     +-------------------+ \n";
+            cout<<"     |   Coordenadas     | \n";
+            cout<<"     +-------------------+ \n";
+	     	cout<<" \n";
+	cout<<"\n";
+	cout<<"P1(0,-6 )\n";
+	cout<<"P2(12,0)";
+	
+		//plano cartesiano
+		moveto(0,300);
+		lineto(600,300);
+	
+		moveto(300,0);
+		lineto(300,600);
+	
+		for(x=0;x<=600;x=x+20)
+		{
+			
+			setcolor(BLUE);
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+		
+		}
+	setcolor(14);
+		outtextxy(450,360,"Forma General");
+     	outtextxy(450,370," x-2y-12=0");
+     
+		outtextxy(450,390,"Forma simetrica");
+		outtextxy(450,400,"  x        y  ");
+		outtextxy(450,410,"-----  - ----- = 1");
+		outtextxy(450,420,"  12        6 ");
+		
+			
+		outtextxy(305,425,"P(0,-6)");
+		outtextxy(546,280,"P(12,0)");
+			setcolor(WHITE);
+//     X
+	outtextxy(0,305," -14");
+    outtextxy(40,305,"-12");
+	outtextxy(80,305,"-10");
+	outtextxy(120,305,"-8");
+	outtextxy(160,305,"-6");
+    outtextxy(200,305,"-4");
+	outtextxy(240,305,"-2");
+												
+													//outtextxy(0,305,"-15");
+	outtextxy(580,305,"14");
+	outtextxy(540,305,"12");
+	outtextxy(500,305,"10");
+	outtextxy(460,305,"8");
+	outtextxy(420,305,"6");
+	outtextxy(380,305,"4");
+	outtextxy(340,305,"2");
+		//Y			
+	outtextxy(270,580,"-14");
+    outtextxy(270,540,"-12");
+	outtextxy(270,500,"-10");
+	outtextxy(280,460,"-8");
+	outtextxy(280,420,"-6");
+    outtextxy(280,380,"-4");
+	outtextxy(280,340,"-2");
+												
+													//outtextxy(0,305,"-15");
+	outtextxy(270,20," 14");
+	outtextxy(270,60," 12");
+	outtextxy(270,100,"10");
+	outtextxy(280,140,"8");
+	outtextxy(280,180,"6");
+	outtextxy(280,220,"4");
+	outtextxy(280,260,"2");		
+		
+	
+		for(y=0;y<=600;y=y+20)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+			setcolor(GREEN);
+		moveto(300,420);//Y
+		lineto(542,300);//X
+		setcolor(BLUE);
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(280,2,"Y");
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(610,300,"X");
+
+
+}
+
+void Ecuaciones:: calcular2(){
+		//setbkcolor(3);
+	//cleardevice();
+	int t1,t2,m,m2,r,g,p,c,w,j,f,z,x,y,t;
+	cout<<a1<<"x"<<b1<<"="<<c1<<"\n";
+	cout<<a2<<"x"<<"+"<<b2<<"="<<c2<<"\n";
+		cout<<"\n";
+	cout<<"\n";
+		cout<<"\n";
+	cout<<"\n";
+	
+	cout<<"\n";
+	cout<<"\n";
+	cout<<"                           -2-3x  \n";
+	cout<<"                       y= ------\n";
+	cout<<"                            -2    \n";
+	cout<<"\n";
+	
+	cout<<"          __________________________________\n";
+	cout<<"          |   X   |  Y    |     PUNTOS      |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -2   | -2    | A(-2,-2)        |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -4   | -5    | B(-4,-5)        |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -6   | -8    | C(-6,-8)        |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	
+	
+	cout<<"\n";
+	cout<<"                      -60-5x  \n";
+	cout<<"                   y= ------\n";
+	cout<<"                         8   \n";
+	cout<<"\n";
+	
+	cout<<"           __________________________________\n";
+	cout<<"          |   X   |  Y    |     PUNTOS      |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -2   | -6.2  | D(-2,-6.2)      |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -4   | -5    | E(-4,-5)        |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	cout<<"          |  -6   | -3.7  | F(-6,-3.7)      |\n";
+	cout<<"          |_______|_______|_________________|\n";
+	
+	
+	
+	
+	
+	
+	
+	
+	t1=a2*(c1);
+	t2=a2*(b1);
+		
+	
+	m=a1*(c2);
+	m2=a1*(b2);
+	
+	r=-1*(m2);
+	g=-1*(t1);
+	
+	p=-1*(t2+1*(r));
+	c=m+1*(g);
+	
+	w=c/p;
+	
+	j=b1*(w);
+	f=-1*(j);
+	
+	z=c1+1*(f);
+	t=z/a1;
+		
+	
+	cout<<"                 __________________________\n";
+	cout<<"                |                         |\n";
+	cout<<"                |    Valor de x ="<<t<<"  |\n";
+	cout<<"                |                         |\n";
+	cout<<"                |    Valor de y ="<<w<<"  |\n";
+	cout<<"                |_________________________|\n";
+	
+	
+		//-Y			
+	outtextxy(270,600,"-10");
+    outtextxy(270,570,"-9");
+	outtextxy(270,540,"-8");
+	outtextxy(270,510,"-7");
+	outtextxy(270,480,"-6");
+    outtextxy(270,450,"-5");
+	outtextxy(270,420,"-4");
+    outtextxy(270,390,"-3");											
+    outtextxy(270,360,"-2");	
+	outtextxy(270,330,"-1");
+	//+Y
+	outtextxy(270, 0," 10");
+    outtextxy(270,30," 9");
+	outtextxy(270,60," 8");
+	outtextxy(270,90," 7");
+	outtextxy(270,120," 6");
+    outtextxy(270,150," 5");
+	outtextxy(270,180," 4");
+    outtextxy(270,210," 3");											
+    outtextxy(270,240," 2");	
+	outtextxy(270,270," 1");
+			
+					//-X			
+	outtextxy(-1,310," -10");
+    outtextxy(20,310," -9");
+	outtextxy(50,310," -8");
+	outtextxy(80,310," -7");
+	outtextxy(110,310,"-6");
+    outtextxy(140,310,"-5");
+	outtextxy(170,310,"-4");
+    outtextxy(200,310,"-3");											
+    outtextxy(230,310,"-2");	
+	outtextxy(260,310,"-1");
+	//+X
+	outtextxy(600,310,"10");
+    outtextxy(570,310,"9");
+	outtextxy(540,310,"8");
+	outtextxy(510,310,"7");
+	outtextxy(480,310,"6");
+    outtextxy(450,310,"5");
+	outtextxy(420,310,"4");
+   	outtextxy(390,310,"3");										
+    outtextxy(360,310,"2");	
+	outtextxy(330,310,"1");
+	
+		outtextxy(330,500,"5x+8y=-60");
+         outtextxy(30,540,"3x-2y=-2");
+	//plano cartesiano
+		moveto(0,300);
+	    lineto(600,300);
+	
+		moveto(300,30);
+		lineto(300,650);
+	
+		for(x=0;x<=600;x=x+30)
+		{
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+			setcolor(BLUE);
+		
+		}
+	setcolor(14);
+		outtextxy(450,360,"Forma General");
+     	outtextxy(450,370," x-2y-12=0");
+     outtextxy(201,440,"a ");
+       outtextxy(201,410," 88.31°");
+     
+		outtextxy(450,390,"Forma simetrica");
+		outtextxy(450,400,"  x        y  ");
+		outtextxy(450,410,"-----  - ----- = 1");
+		outtextxy(450,420,"  12        6 ");
+		
+			
+	
+	
+		
+		outtextxy(9,430,"    Punto de");
+		outtextxy(9,440,"   interseccion --->");	
+		outtextxy(9,450,"    P(-4,-5)");
+		
+	
+		for(y=0;y<=600;y=y+30)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+			setcolor(RED);
+			circle(178,450,4);
+			circle(178,450,3);
+			circle(178,450,2);
+			circle(178,450,1);
+			setcolor(GREEN);
+	moveto(-10 /*x*/,350);
+	lineto(350,540/*y*/);
+		
+			moveto(290,270/*x*/);
+		lineto(83,600/*y*/);
+		
+	
+	arc(201,440,283,90,20);
+		setcolor(BLUE);
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(280,2,"Y");
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(610,300,"X");
+
+}
+
+void Ecuaciones:: calcular3(){
+	int x,y,opc;
+	
+/*	cout<<tb;
+	setbkcolor(3);
+	cleardevice();
+	circle(450,250,250);
+	circle(450,250,240);
+	circle(450,250,230);
+	settextstyle(2, HORIZ_DIR,7);
+	outtextxy(230,250,"X,Y");	*/
+
+	
+	
+		//-Y			
+	outtextxy(270,600,"-10");
+    outtextxy(270,570,"-9");
+	outtextxy(270,540,"-8");
+	outtextxy(270,510,"-7");
+	outtextxy(270,480,"-6");
+    outtextxy(270,450,"-5");
+	outtextxy(270,420,"-4");
+    outtextxy(270,390,"-3");											
+    outtextxy(270,360,"-2");	
+	outtextxy(270,330,"-1");
+	//+Y
+	outtextxy(270, 0," 10");
+    outtextxy(270,30," 9");
+	outtextxy(270,60," 8");
+	outtextxy(270,90," 7");
+	outtextxy(270,120," 6");
+    outtextxy(270,150," 5");
+	outtextxy(270,180," 4");
+    outtextxy(270,210," 3");											
+    outtextxy(270,240," 2");	
+	outtextxy(270,270," 1");
+			
+					//-X			
+	outtextxy(-1,310," -10");
+    outtextxy(20,310," -9");
+	outtextxy(50,310," -8");
+	outtextxy(80,310," -7");
+	outtextxy(110,310,"-6");
+    outtextxy(140,310,"-5");
+	outtextxy(170,310,"-4");
+    outtextxy(200,310,"-3");											
+    outtextxy(230,310,"-2");	
+	outtextxy(260,310,"-1");
+	//+X
+	outtextxy(600,310,"10");
+    outtextxy(570,310,"9");
+	outtextxy(540,310,"8");
+	outtextxy(510,310,"7");
+	outtextxy(480,310,"6");
+    outtextxy(450,310,"5");
+	outtextxy(420,310,"4");
+   	outtextxy(390,310,"3");										
+    outtextxy(360,310,"2");	
+	outtextxy(330,310,"1");
+							
+	//plano cartesiano
+		moveto(0,300);
+	    lineto(600,300);
+	
+		moveto(300,30);
+		lineto(300,650);
+			cout<<"     \n";
+			cout<<"     \n";
+			cout<<"     \n";
+		
+		cout<<"                      * * * * * * * * * * *    \n";
+		cout<<"                      *  Elige la Grafica *   \n";
+		cout<<"                      *                   *   \n";
+	 	cout<<"                      * * * * * * * * * * *   \n";
+	 	cout<<"     \n";
+		cout<<"                     ____________________\n";
+		cout<<"                     |                  |\n";
+		cout<<"                     |    1-Elipse      |\n";
+		cout<<"                     |    2-Recta       |\n";
+		cout<<"                     |    3-Parabola    |\n";
+		cout<<"                     |__________________|\n";
+		cin>>opc;
+		 system("cls");
+		switch(opc)
+		{
+			case 1:
+				//PUNTOS
+	cout<<"                    Tabulacion de la  elipse      \n";
+    cout<<"                          _____________         \n";
+	cout<<"                         /  -9x^2 + 225   \n";
+	cout<<"                     y= / ------------- \n";
+	cout<<"                       v        25\n";
+				
+	cout<<"          ___________________________________________\n";
+	cout<<"          |   X   |  Y    |         PUNTOS           |\n";
+	cout<<"          |_______|_______|__________________________|\n";
+	cout<<"          |  -5   |  0    | A(-5,0)   | M(-5,0)      |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |  -4   |  1.8  | B(-4,1.8) | N(-4,-1.8)   |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |  -3   |  2.4  | C(-3,2.4) | O(-3,-2.4)   |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |  -2   |  2.7  | D(-2,2.7) | P(-2,-2.7)   |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |  -1   |  2.9  | E(-1,2.9) | S(-1,-2.9)   |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |  -0   |  3    | F(0,3)    | T(0,-3)      |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |   1   |  2.9  | G(1,2.9)  | U(1,-2.9     |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |   2   |  2.7  | I(2,2.7)  | V(2,-2.7)    |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |   3   |  2.4  | J(3,2.4)  | W(3,-2.4)    |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |   4   |  1.8  | K(4,1.8)  | X(4,-1.8)    |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+	cout<<"          |   5   |  0    | L(5,0)    | Y(5,0)       |\n";
+	cout<<"          |_______|_______|___________|______________|\n";
+
+	
+	
+	
+				
+	outtextxy(480,130,"L(5,0)");	
+	outtextxy(480,120,"K(4,1.8)");
+    outtextxy(480,110,"J(3,2.4)");
+	outtextxy(480,100,"I(2,2.7)");
+	outtextxy(480,90,"G(1,2.9)");
+	
+	outtextxy(480,80,"F(0,3)");
+    outtextxy(480,70,"E(-1,2.9)");
+	outtextxy(480,60,"D(-2,2.7)");
+    outtextxy(480,50,"C(-3,2.4)");											
+    outtextxy(480,40,"B(-4,1.8)");	
+	outtextxy(480,30,"A(-5,0)");
+	
+	
+	
+	outtextxy(480,390,"M(-5,0)");	
+	outtextxy(480,400,"N(-4,-1.8)");
+    outtextxy(480,410,"O(-3,-2.4)");
+	outtextxy(480,420,"P(-2,-2.7)");
+	outtextxy(480,430,"S(-1,-2.9)");
+	
+	outtextxy(480,440,"T(0,-3)");
+    outtextxy(480,450,"U(1,-2.9)");
+	outtextxy(480,460,"V(2,-2.7)");
+    outtextxy(480,470,"W(3,-2.4)");											
+    outtextxy(480,480,"X(4,-1.8)");	
+	outtextxy(480,490,"Y(5,0)");
+	//UBICACIONES
+	setcolor(14);
+	outtextxy(460,287,"L");	
+	outtextxy(420,225,"K");
+    outtextxy(390,209,"J");
+	outtextxy(360,205,"I");
+	outtextxy(330,200,"G");
+	
+	outtextxy(305,198,"F");
+    outtextxy(270,198,"E");
+	outtextxy(240,205,"D");
+    outtextxy(210,215,"C");											
+    outtextxy(180,230,"B");	
+	outtextxy(140,280,"A");
+	     	setcolor(WHITE);
+			
+			outtextxy(180,240,"°");
+			outtextxy(210,224,"°");
+			outtextxy(240,212,"°");
+			outtextxy(270,209,"°");
+			
+			outtextxy(330,209,"°");
+			outtextxy(360,216,"°");
+			outtextxy(390,227,"°");//
+			outtextxy(420,246,"°");
+			
+			outtextxy(180,352,"°");
+			outtextxy(210,370,"°");
+			outtextxy(240,380,"°");//
+			outtextxy(270,385,"°");//
+			
+			outtextxy(330,385,"°");
+			outtextxy(360,378,"°");
+			outtextxy(390,365,"°");
+			outtextxy(420,347,"°");
+			
+			setcolor(14);
+	outtextxy(305,399,"T");
+    outtextxy(270,400,"S");
+	outtextxy(240,395,"P");
+    outtextxy(210,385,"O");											
+    outtextxy(180,367,"N");	
+	outtextxy(140,305,"M");
+	
+	outtextxy(460,305,"Y");	
+	outtextxy(420,360,"X");
+    outtextxy(390,380,"W");
+	outtextxy(360,389,"V");
+	outtextxy(330,395,"U");
+	
+       
+ 	outtextxy(150,180," 9x^2+25y^2=225");
+
+				
+
+	
+	
+		for(x=0;x<=600;x=x+30)
+		{
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+			setcolor(BLUE);
+		
+		}
+	
+		for(y=0;y<=600;y=y+30)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+			
+			setcolor(GREEN);
+//rectangle(450,120,200,450);
+	//	fillellipse(300,300,150,90);
+
+   ellipse( 300, 300, 360, 360, 150, 90 );
+				break;
+	case 2:
+		//plano cartesiano
+			//-Y		
+			
+	cout<<"   \n";
+	cout<<"         \n";
+	cout<<"             Tabulacion de la  recta  \n";
+	cout<<"                     Y=-6X \n";
+				
+	cout<<"          ____________________________\n";
+	cout<<"          |   X   |  Y    |  PUNTOS   |\n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |  -2   |  12   | D(-2,12)  | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |  -1   |   6   | E(-1,6)   | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   0   |   0   | F(0,0)    |\n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   1   |  -6   | G(1,-9)   | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   2   |  -12  | I(2,-12)  |\n";
+	cout<<"          |_______|_______|___________|\n";
+
+	
+			
+			
+			
+		
+	outtextxy(270,600,"-10");
+    outtextxy(270,570,"-9");
+	outtextxy(270,540,"-8");
+	outtextxy(270,510,"-7");
+	outtextxy(270,480,"-6");
+    outtextxy(270,450,"-5");
+	outtextxy(270,420,"-4");
+    outtextxy(270,390,"-3");											
+    outtextxy(270,360,"-2");	
+	outtextxy(270,330,"-1");
+	//+Y
+	outtextxy(270, 0," 10");
+    outtextxy(270,30," 9");
+	outtextxy(270,60," 8");
+	outtextxy(270,90," 7");
+	outtextxy(270,120," 6");
+    outtextxy(270,150," 5");
+	outtextxy(270,180," 4");
+    outtextxy(270,210," 3");											
+    outtextxy(270,240," 2");	
+	outtextxy(270,270," 1");
+			
+					//-X			
+	outtextxy(-1,310," -10");
+    outtextxy(20,310," -9");
+	outtextxy(50,310," -8");
+	outtextxy(80,310," -7");
+	outtextxy(110,310,"-6");
+    outtextxy(140,310,"-5");
+	outtextxy(170,310,"-4");
+    outtextxy(200,310,"-3");											
+    outtextxy(230,310,"-2");	
+	outtextxy(260,310,"-1");
+	//+X
+	outtextxy(600,310,"10");
+    outtextxy(570,310,"9");
+	outtextxy(540,310,"8");
+	outtextxy(510,310,"7");
+	outtextxy(480,310,"6");
+    outtextxy(450,310,"5");
+	outtextxy(420,310,"4");
+   	outtextxy(390,310,"3");										
+    outtextxy(360,310,"2");	
+	outtextxy(330,310,"1");
+						
+	
+		
+		
+		for(x=0;x<=600;x=x+30)
+		{
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+			setcolor(BLUE);
+		
+		}
+	
+		for(y=0;y<=600;y=y+30)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+	setcolor(WHITE);
+		outtextxy(180,180," y=-6x");
+	
+	setcolor(14);
+		moveto(270,120);
+		lineto(330,480);
+		
+		
+				break;
+					case 3:
+						
+						
+						
+								cout<<"   \n";
+	cout<<"           Tabulacion de la  parabola \n";
+	cout<<"                        2 \n";
+    cout<<"                    Y=X \n";
+				
+	cout<<"          ____________________________\n";
+	cout<<"          |   X   |  Y    |  PUNTOS   |\n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   -3  |  9    | C(-3,9)   | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |  -2   |   4   | D(-2,4)   | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |  -1   |   1   | E(-1,1)   |\n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   0   |  0    | F(0,0)    | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   1   |  1    | G(1,-1)   |\n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   2   |  4    | I(2,4)    | \n";
+	cout<<"          |_______|_______|___________|\n";
+	cout<<"          |   3   |  9    | J(3,9)    |\n";
+	cout<<"          |_______|_______|___________|\n";
+
+
+	
+						//plano cartesiano
+			//-Y			
+	outtextxy(270,600,"-10");
+    outtextxy(270,570,"-9");
+	outtextxy(270,540,"-8");
+	outtextxy(270,510,"-7");
+	outtextxy(270,480,"-6");
+    outtextxy(270,450,"-5");
+	outtextxy(270,420,"-4");
+    outtextxy(270,390,"-3");											
+    outtextxy(270,360,"-2");	
+	outtextxy(270,330,"-1");
+	//+Y
+	outtextxy(270, 0," 10");
+    outtextxy(270,30," 9");
+	outtextxy(270,60," 8");
+	outtextxy(270,90," 7");
+	outtextxy(270,120," 6");
+    outtextxy(270,150," 5");
+	outtextxy(270,180," 4");
+    outtextxy(270,210," 3");											
+    outtextxy(270,240," 2");	
+	outtextxy(270,270," 1");
+			
+					//-X			
+	outtextxy(-1,310," -10");
+    outtextxy(20,310," -9");
+	outtextxy(50,310," -8");
+	outtextxy(80,310," -7");
+	outtextxy(110,310,"-6");
+    outtextxy(140,310,"-5");
+	outtextxy(170,310,"-4");
+    outtextxy(200,310,"-3");											
+    outtextxy(230,310,"-2");	
+	outtextxy(260,310,"-1");
+	//+X
+	outtextxy(600,310,"10");
+    outtextxy(570,310,"9");
+	outtextxy(540,310,"8");
+	outtextxy(510,310,"7");
+	outtextxy(480,310,"6");
+    outtextxy(450,310,"5");
+	outtextxy(420,310,"4");
+   	outtextxy(390,310,"3");										
+    outtextxy(360,310,"2");	
+	outtextxy(330,310,"1");
+						
+		outtextxy(150,180," y=x^2");
+		
+		
+		for(x=0;x<=600;x=x+30)
+		{
+			circle(300,x,3);
+			circle(300,x,2);
+			circle(300,x,1);
+			setcolor(BLUE);
+		
+		}
+	
+		for(y=0;y<=600;y=y+30)
+		{
+				setcolor(BLUE);
+			circle(y,300,3);
+			circle(y,300,2);
+			circle(y,300,1);
+	
+		}
+		
+		setcolor(14);
+		
+		moveto(300,300);
+		lineto(270,270);
+	
+		moveto(240,180);
+		lineto(270,270);
+	
+		
+		moveto(210,30);
+		lineto(240,180);	
+			////	
+		moveto(300,300);
+		lineto(330,270);
+	
+		
+		moveto(360,180);
+		lineto(330,270);
+	
+		
+		moveto(390,30);
+		lineto(360,180);
+			outtextxy(270,270,"°");
+			outtextxy(240,180,"°");
+			outtextxy(210,30,"°");
+		///
+			outtextxy(330,270,"°");	
+			outtextxy(360,180,"°");
+		    outtextxy(390,30,"°");
+		///
+		    outtextxy(255,270,"E");
+			outtextxy(230,180,"D");
+			outtextxy(200,30,"C");
+		
+		    outtextxy(345,270,"G");	
+			outtextxy(375,180,"I");
+		    outtextxy(400,30,"J");
+		
+		
+		     outtextxy(30,90,"E(-1,1)");
+			outtextxy(30,110,"D(-2,4)");
+			outtextxy(30,130,"C(-3,4)");
+		
+		    outtextxy(480,90,"G(1,1)");	
+			outtextxy(480,110,"I(2,4)");
+		    outtextxy(480,130,"J(3,4)");
+			
+		
+		
+		
+		
+				break;
+		}
+	
+	
+			setcolor(BLUE);
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(280,2,"Y");
+		settextstyle(1, HORIZ_DIR,2);
+		outtextxy(610,300,"X");
+
+}
+int main()
+{
+	
+	int x,y,opc;
+    initwindow(650,650);
+	
+		
+	
+Ecuaciones r1(-25,-5,75,1,2,-9,-6,3,-2,-2,5,8,-60,"tabulacio");
+Ecuaciones r2(-25,-5,75,1,2,-9,-6,3,-2,-2,5,8,-60,"tabulacio");
+Ecuaciones r3(-25,-5,75,1,2,-9,-6,3,-2,-2,5,8,-60,"tabulacio");
+Ecuaciones r4(-25,-5,75,1,2,-9,-6,3,-2,-2,5,8,-60,"tabulacio");
+ // Ecuaciones r3(3,-2,-2,5,8,-60);
+ 
+	//system("color 9");
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),YELLOW);
+
+	cout<<"                           _               + -------------------------------+                 _              \n";
+	cout<<"                         .  '.__________   |                                |     _________.'  '.            \n";
+	cout<<"                    ----/  '_)__________)  |  Bienvenido a nuestro producto |    (_________ (_'   '------   \n";
+	cout<<"                       (      ()______)    |              de                |      (______()     )          \n";
+	cout<<"                              ()_____)     |       Geometria Analitica      |        (____()                 \n";
+    cout<<"                    -----'    ()___)       |                                |         (___()     '------   \n";
+	cout<<"                          '---'            +--------------------------------+               '---'           \n";
+	cout<<"                     \n";	
+	cout<<"                        \n";
+	cout<<"                      \n";
+	cout<<"                      \n";
+    
+   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),WHITE);
+//	system("color A");
+ cout<<"                                              -------ELIGE EL PRODUCTO--------\n";
+
+ cout<<"  \n";
+cout<<"                                                         PRODUCTO 1\n";
+cout<<"  \n";
+cout<<"                                                         PRODUCTO 2\n";
+cout<<"  \n";
+cout<<"                                                         PRODUCTO 3\n";
+cout<<"  \n";
+cout<<"                                                         PRODUCTO 4\n";
+cout<<"  \n";
+
+cin>>opc;
+
+ system("cls");
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),YELLOW);
+switch(opc)
+{
+	    case 1:
+	    	 system("cls");
+		r1. calcular();
+		break;
+			case 2:
+				 system("color F");
+				system("cls");
+		 r2. calcular1();
+		break;
+			case 3:
+					system("cls");
+		r3. calcular2();
+		break;
+			case 4:
+			r4. calcular3();
+		break;
+}
+getch();
+closegraph();
+
+
+ 
+ system("pause");
+
+}
+
